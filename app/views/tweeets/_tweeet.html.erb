@@ -1,8 +1,8 @@
 <div id="<%= dom_id tweeet %>" class='px-8'>
   <p>
     <div class='flex gap-2'>
-      <strong class="block font-medium"><%= current_user.name %></strong>
-      <span>@<%= current_user.username %></span>
+      <strong class="block font-medium"><%= tweeet.user.name %></strong>
+      <span>@<%= tweeet.user.username %></span>
     </div>
     <%= tweeet.body %>
   </p>

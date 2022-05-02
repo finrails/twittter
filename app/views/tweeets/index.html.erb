@@ -1,6 +1,5 @@
-<div class="w-full">
-  <%= render partial: 'shared/header' %>
-  <section>
+<%= render partial: 'shared/header' %>
+  <section class='w-full md:max-w-lg lg:max-w-2xl'>
     <% if notice.present? %>
       <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
     <% end %>
@@ -12,11 +11,14 @@
       </article>
     <% end %>
 
+    <%= render partial: 'form', locals: { tweeet: @tweeet } %>
+
     <div id="tweeets" class='mt-7'>
+    <% if @tweeets.any? %>
       <% @tweeets.each do |tweeet| %>
       <%= render tweeet %>
       <div style='height: 1px;' class='bg-gray-300 my-4'></div>
       <% end %>
+    <% end %>
     </div>
   </section>
-</div>
