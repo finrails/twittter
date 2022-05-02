@@ -6,6 +6,9 @@ ruby "3.1.2"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 
+# Use devise to Auth control
+gem "devise", "~> 4.8", ">= 4.8.1"
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
@@ -60,7 +63,7 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
-  # Use byebug for debug environment 
+  # Use byebug for debug environment
   gem 'pry-byebug', '~> 3.9'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
