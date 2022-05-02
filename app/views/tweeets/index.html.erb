@@ -5,6 +5,12 @@
       <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
     <% end %>
 
+    <% if user_signed_in? %>
+      <article>
+        <strong>Logged in as: <%= current_user.name %></strong>
+        <%= link_to 'Log out', destroy_user_session_path, data: { turbo_method: :delete } %>
+      </article>
+    <% end %>
 
     <div id="tweeets" class='mt-7'>
       <% @tweeets.each do |tweeet| %>
