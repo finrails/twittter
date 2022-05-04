@@ -1,14 +1,23 @@
 <div id="<%= dom_id tweeet %>" class='px-8'>
   <p>
-    <div class='flex gap-2'>
-      <strong class="block font-medium"><%= tweeet.user.name %></strong>
-      <span>@<%= tweeet.user.username %></span>
+    <div class='flex items-center gap-2'>
+      <strong class="block text-gray-800 text-xl font-medium"><%= tweeet.user.name %></strong>
+      <span class="text-gray-500">@<%= tweeet.user.username %></span>
     </div>
     <%= tweeet.body %>
   </p>
 
   <% if action_name != "show" %>
-    <%= link_to "Show this tweeet", tweeet %>
-    <%= link_to 'Edit this tweeet', edit_tweeet_path(tweeet)%>
+  <div id="user-controls" class="flex gap-8 mt-4">
+    <%= link_to tweeet do %>
+      <%= image_tag 'eye.svg' %>
+    <% end %>
+    <%= link_to edit_tweeet_path(tweeet) do %>
+      <%= image_tag 'edit.svg' %>
+    <% end %>
+    <%= link_to tweeet_path(tweeet), data: { turbo_method: :delete } do %>
+      <% image_tag 'trash.svg' %>
+    <% end %>
+  </div>
   <% end %>
 </div>
