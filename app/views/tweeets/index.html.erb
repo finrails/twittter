@@ -6,11 +6,11 @@
 
     <%= render partial: 'form', locals: { tweeet: @tweeet } %>
 
-    <div id="tweeets" class='mt-7'>
+    <div id="tweeets" class='mt-7 relative z-10'>
     <% if @tweeets.any? %>
       <% @tweeets.each do |tweeet| %>
       <%= render tweeet %>
-      <div style='height: 1px;' class='bg-gray-300 my-4'></div>
+        <div style='height: 1px;' class='bg-gray-300 my-4'></div>
       <% end %>
     <% end %>
     </div>
