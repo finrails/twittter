@@ -7,7 +7,7 @@ For this project i have used Rails, PostgreeSQL and TailwindCSS.
 
 This project is deployed on Heroku...
 it's a Cloud Service to deploy web applications, it's really cool, it's is
-clean, lightweight and very useful.
+clean, lightweight and very useful, it's god nectar.
 
 I really like it.
 
