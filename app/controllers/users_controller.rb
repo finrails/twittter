@@ -4,6 +4,8 @@ class UsersController < ApplicationController
 
     if @user
       render :show, locals: { user: @user }
+    else
+      redirect_to not_found_path
     end
   end
 end
